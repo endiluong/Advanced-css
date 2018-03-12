@@ -1,0 +1,122 @@
+/* Responsive for max 700px */
+
+@media (max-width: 700px)
+{
+    body{
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.4;
+        color: #777;
+        padding: 12px;
+    
+    }
+
+    .heading-primary{
+        color: white;
+        text-transform: uppercase;
+        backface-visibility: hidden;
+        margin-bottom: 60px;
+    }
+    .heading-primary-main{
+        display: block;
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 22px;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    
+    
+        /* Number of repeation of the animation
+        /* animation-iteration-count: 2; */
+    }
+    
+    .heading-primary-sub{
+        display: block;
+        font-weight: 400;   
+        font-size: 16px;
+        letter-spacing: 9px;
+        /* animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out; */
+        animation: moveInRight 1s ease-out;
+    }
+    .logo-box{  
+        position: absolute;
+        top: 10%;
+        left: 50%;    
+        transform: translate(-50%);
+    }
+    .logo{
+        height: 35px;
+    }
+    
+}
+
+/* Responsive for max 400px */
+@media  (max-width: 350px) and (min-width: 150px) 
+{
+    body{
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.4;
+        color: #777;
+        padding: 12px;
+    
+    }
+
+    .heading-primary{
+        color: white;
+        text-transform: uppercase;
+        backface-visibility: hidden;
+        margin-bottom: 60px;
+    }
+    .heading-primary-main{
+        display: block;
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 12px;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    
+    
+        /* Number of repeation of the animation
+        /* animation-iteration-count: 2; */
+        
+    }
+    
+    .heading-primary-sub{
+        display: block;
+        font-weight: 400;   
+        font-size: 12px;
+        letter-spacing: 10px;
+        /* animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out; */
+        animation: moveInRight 1s ease-out;
+    }
+    .btn:link,
+    .btn:visited{
+        text-transform: uppercase;
+        text-decoration:none;
+        padding: 10px 20px;
+        display: inline-block;
+        border-radius: 40px;
+        transition: all .2s;
+        position: relative;
+        
+    }
+    .logo-box{  
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .logo{
+        height: 25;
+    }
+
+}
