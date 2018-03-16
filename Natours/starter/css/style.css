@@ -6,8 +6,8 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-*
-*::after
+*,
+*::after,
 *::before {
   margin: 0;
   padding: 0;
@@ -253,34 +253,73 @@ body {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 50rem; }
+  height: 49rem; }
   .card_side {
-    color: white;
-    font-size: 2rem;
-    height: 50rem;
+    height: 49rem;
     transition: all .8s ease;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
     .card_side--front {
-      background-color: #FFF;
-      background-color: linear-gradient(to right, white, black);
-      background-color: red; }
+      background-color: #FFF; }
     .card_side--back {
       transform: rotateY(180deg); }
       .card_side--back-1 {
-        color: red;
-        background: linear-gradient(to right bottom, #ffb900, #ff7730); }
+        background: linear-gradient(to right bottom, #ee6c4d, #D90429); }
       .card_side--back-2 {
         background-color: green; }
       .card_side--back-3 {
         background-color: green; }
   .card:hover .card_side--front {
-    transform: rotateY(180deg); }
+    transform: rotateY(-180deg); }
   .card:hover .card_side--back {
     transform: rotateY(0deg); }
+  .card_picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card_picture--1 {
+      background-image: linear-gradient(to right bottom, #ee6c4d, #D90429), url(../img/snk-5.jpg); }
+    .card_picture--2 {
+      background-image: url(../img/nat-5.jpg); }
+    .card_picture--3 {
+      background-image: url(../img/nat-5.jpg); }
+  .card_heading {
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    text-align: right;
+    top: 12rem;
+    right: 1rem;
+    width: 65%;
+    z-index: 1; }
+  .card_heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card_heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(238, 108, 77, 0.85), rgba(217, 4, 41, 0.85)); }
+  .card_details {
+    pdding: 3rem; }
+    .card_details ul {
+      list-style-type: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card_details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card_details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
 
 .section-about {
   background-color: #f7f7f7;
@@ -299,7 +338,7 @@ body {
 .section-tours {
   background-color: #f7f7f7;
   padding: 25rem 0 50rem 0;
-  margin-top: -55vh; }
+  margin-top: -30vh; }
 
 .header {
   height: 95vh;
