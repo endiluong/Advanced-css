@@ -231,10 +231,75 @@ body {
   .composition:hover .composition_photo:not(:hover) {
     transform: scale(0.95); }
 
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  padding-top: 5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform .2s; }
+  .feature-box_icon {
+    font-size: 6rem;
+    margin-bottom: .5rem;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem; }
+  .card_side {
+    color: white;
+    font-size: 2rem;
+    height: 50rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden; }
+    .card_side--front {
+      background-color: #FFF;
+      background-color: linear-gradient(to right, white, black);
+      background-color: red; }
+    .card_side--back {
+      transform: rotateY(180deg); }
+      .card_side--back-1 {
+        color: red;
+        background: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card_side--back-2 {
+        background-color: green; }
+      .card_side--back-3 {
+        background-color: green; }
+  .card:hover .card_side--front {
+    transform: rotateY(180deg); }
+  .card:hover .card_side--back {
+    transform: rotateY(0deg); }
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -10vh; }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
+  background-size: cover;
+  background-position: top;
+  border-radius: 10px;
+  clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%);
+  transform: translateY(-33%); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 25rem 0 50rem 0;
+  margin-top: -55vh; }
 
 .header {
   height: 95vh;
